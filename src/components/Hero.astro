@@ -1,0 +1,84 @@
+<div class="hero" id="hero">
+    <h1 class="effect-shine"><span class="text-gradient">Information</span> Matters</h1>
+<h2>Which is why we're doing our best to create a worldwide repository of coffee information.</h2>
+    <div class="button-top">
+    <button>Create a CoffeeID</button>
+    <button>Look up a CoffeeID</button>
+    </div>
+        <div class="button-bottom">
+        <button>Learn more about what we do</button>
+        </div>
+</div>
+
+<style>
+    h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+    /* effect-shine */
+h1.effect-shine:hover {
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 75%);
+  -webkit-mask-size: 200% 100%;
+  animation: shine 2s linear
+}
+
+@keyframes shine {
+  0% {
+    -webkit-mask-position: 200% 0;
+  }
+  100% {
+    -webkit-mask-position: -200% 0;
+  }
+}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+    h2 {
+    text-align: center;
+    }
+.button-top {
+    /* background-image: url("../assets/bg-themes/leafbg.webp"); */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.button-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; /* this may not be the best way to do this */
+}
+
+button {
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    background: rgba( 0, 0, 0, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.57);
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 4px;
+    font-size: 1.3rem;
+}
+
+button:hover {
+    background: transparent;
+    color: white;
+    backdrop-filter: blur( 9px );
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.hero {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+</style>

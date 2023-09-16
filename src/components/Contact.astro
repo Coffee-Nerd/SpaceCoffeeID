@@ -1,0 +1,73 @@
+<div class="contact">
+    <h3>Contact</h3>
+    <p>Lets get in touch. Send us a message!</p>
+    <br>
+    <p style="font-size: 1.1rem;">&#x1F4CD; Location: Melbourne, Victoria</p>
+    <p style="font-size: 1.1rem;">&#9993; Email: contact@information.coffee</p>
+    <form method="post" id="forms">
+        <p><textarea type="email" placeholder="Email" required name="Email"></textarea></p>
+        <p><textarea type="text" placeholder="Subject" required name="Subject"></textarea></p>
+        <p><textarea placeholder="Message" required name="Message"></textarea></p>
+        <p>
+          <button class="button black" type="submit" name="submit">
+            <i class="fa fa-paper-plane"></i>SEND MESSAGE
+          </button>
+        </p>
+      </form>
+</div>
+
+<style>
+
+    .contact {
+        margin-top: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
+        border-radius: 8px;
+        padding: 0rem 1.5rem 1.5rem 1.5rem;
+    }
+    h3 {
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    textarea {
+        width: 100%;
+        border-radius: 8px;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: white; /*this needs to be a variable in the future*/
+        background-color: rgb(0, 0, 0, 0.18);
+        backdrop-filter: blur(9px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    button {
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    background: rgba( 0, 0, 0, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.57);
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 4px;
+}
+
+button:hover {
+    background: transparent;
+    color: white;
+    backdrop-filter: blur( 9px );
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#forms {
+margin-top: 1rem;
+}
+
+</style>
+   

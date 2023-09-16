@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+import sectionImage from "../assets/images/coffeebeans.jpg";
+---
+<div class="section2">
+  <div class="sectionContent">
+    <div class="section2header">
+      <h3>So... What is CoffeeID??</h3>
+    </div>
+    <p>You can think of CoffeeID as a digital coffee information card. Think about when you go into a cafe and you're presented with a beautiful card, full of all of the information about the coffee, and if you're lucky it may have some photos on it as well.
+
+    CoffeeID allows you to have a digital coffee information card and allows you to include MORE information, MORE photos, and potentially even videos.
+
+    This digital tool helps eliminate the cost and environmental harm of getting your information printed on paper, but also allows for far more possibilities when it comes to providing more information to everyone who may enjoy it, whether that be friends, family, customers, or even yourself.
+
+    CoffeeID makes it easy to share information with everyone. You just input your information, and share your CoffeeID!</p>
+  </div>
+  <div class="sectionImage">
+    <Image src={sectionImage} alt="a bowl full of coffee beans" id="sectionImage">
+  </div>
+</div>
+<style>
+.section2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns: content and image */
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+
+.sectionContent {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  border-radius: 10px 0px 0px 10px;
+  max-width: 600px;
+}
+
+.sectionImage {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.sectionImage img {
+  border-radius: 0px 10px 10px 0px;
+  max-width: 100%;
+  height: auto;
+}
+
+.section2header {
+  display: flex;
+  justify-content: center;
+}
+
+.section2:hover {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.5s;
+  border-radius: 10px;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .section2 {
+    grid-template-columns: 1fr;
+  }
+  .sectionContent {
+    margin: auto;
+    padding: 1px;
+    text-align: center;
+  }
+
+  .sectionImage {
+    justify-content: center;
+  }
+  .sectionImage img {
+  border-radius: 0px 0px 10px 10px;
+}
+}
+
+
+    </style>

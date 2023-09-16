@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import globe from "../assets/images/globe.jpg";
+interface Props {
+	title: string;
+	body: string;
+	image: string;
+    alt: string;
+}
+
+const { image, title, body, alt } = Astro.props;
+---
+
+<li class="link-card"> 
+	<img src={image} alt={alt} width="200" height="200">
+    <div class="card-content">
+		<h2>
+			{title}
+			<span></span>
+		</h2>
+		<p>
+			{body}
+		</p>
+	</a>
+</div>
+</li>
+<style>
+	.link-card {
+		list-style: none;
+		display: grid;
+		text-align: center;
+        margin-top: 10px;
+		background-color: rgb(0, 0, 0, 0.8); /* #1a1e21; */
+		border-radius: 10px;
+		/* box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1); */
+		border: 1px solid black;
+	}
+	.link-card > a {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: calc(1.5rem - 1px);
+		border-radius: 8px;
+		color: white;
+		opacity: 0.8;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.5rem;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+		font-size: 1.1rem;
+	}
+	.link-card:is(:hover, :focus-within) {
+		background-position: 0;
+		background-color: transparent;
+		transition: background-color 0.5s;
+		backdrop-filter: blur(16px);
+		border: 1px solid rgba(255, 255, 255, 0.18);
+	}
+	.link-card:is(:hover, :focus-within) h2 {
+		color: rgb(var(--accent-light));
+	}
+
+	.link-card img {
+		width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+	border-radius: 8px 8px 0px 0px;
+	height: auto;
+	}
+
+	.card-content {
+		padding: 1.5rem;
+	}
+</style>
