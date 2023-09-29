@@ -1,3 +1,6 @@
+---
+import Socials from '../components/Socials.astro';
+---
 <div class="hero" id="hero">
     <h1 class="effect-shine"><span class="text-gradient">Information</span> Matters</h1>
 <h2>Which is why we're doing our best to create a worldwide repository of coffee information.</h2>
@@ -8,6 +11,7 @@
         <div class="button-bottom">
         <button>Learn more about what we do</button>
         </div>
+        <Socials />
 </div>
 
 <style>
@@ -43,6 +47,8 @@ h1.effect-shine:hover {
 	}
     h2 {
     text-align: center;
+    line-height: 1.1;
+    font-size: 1.3rem;
     }
 .button-top {
     /* background-image: url("../assets/bg-themes/leafbg.webp"); */
