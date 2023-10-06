@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import logoImage from "../assets/logo/logo-96x96.webp";
 
 ---
-<div class="navbar" id="navbar">
+<nav class="navbar" id="navbar">
     <a href="/" class="logo-container"><img src={logoImage.src} id="logo-image" width="80px" height="80px" alt="a magnifying glass looking at the planet" />World Coffee Information</a>
     <div class="navbar-toggler-hamburger" id="navbar-toggler-hamburger"></div>
     <div class="navbar-collapse" id="navbar-collapse">
@@ -15,7 +15,7 @@ import logoImage from "../assets/logo/logo-96x96.webp";
         <li><a href="/">Sign in</a></li>
       </ul>
     </div>
-  </div>
+  </nav>
   
   
 
@@ -49,7 +49,6 @@ li {
 .navbar {
   top: 0;
   position: sticky;
-  background-color: transparent;
   width: 100%;
   z-index: 1000;
   margin-bottom: 2rem;
@@ -66,6 +65,7 @@ li {
   max-height: 500px;
   overflow: hidden;
   text-align: center;
+  background-color: transparent;
 }
 
 .navbar-toggler-hamburger {
@@ -83,6 +83,7 @@ li {
         backdrop-filter: blur(16px) saturate(100%);
         /* border-bottom: 1px solid rgba(0, 0, 0, .2); Not sure which one to use yet: this is original... */ 
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        background-color:transparent;
     }
 
 @media (max-width: 1000px) {
@@ -94,7 +95,6 @@ li {
     filter: drop-shadow(2px 2px 2px black);
     margin: 1rem;
   }
-
   .navbar-collapse {
     flex-direction: column;
     gap: 10px;

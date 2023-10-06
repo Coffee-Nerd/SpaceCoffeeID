@@ -1,16 +1,28 @@
-const navbarCollapse = document.getElementById("navbar-collapse");
-const navbar = document.getElementById("navbar");
-document.getElementById("navbar-toggler-hamburger").addEventListener("click", function() {
-  if (navbarCollapse.classList.contains("show")) {
-    navbarCollapse.classList.add("hiding");
-    setTimeout(() => {
-      navbarCollapse.classList.remove("hiding");
-    }, 400);
-    navbarCollapse.classList.remove("show");
-  } else {
-    navbarCollapse.classList.add("show");
-    navbar.classList.add("scrolled");
-    navbar.style.borderBottom = "";
-  }
-});
+document.addEventListener('DOMContentLoaded', function() {
+  var navbar = document.querySelector('.navbar');
+  const navbarToggler = document.getElementById('navbar-toggler-hamburger');
+  const navbarCollapse = document.getElementById('navbar-collapse');
 
+  navbarToggler.addEventListener('click', () => {
+    if (navbarCollapse.classList.contains('show')) {
+      if (navbar.classList.contains('scrolled')) {
+        // Enable transition if 'scrolled' is also present
+        navbarCollapse.style.transition = '';
+      } else {
+        // Disable transition
+        navbarCollapse.style.transition = 'none';
+      }
+
+      navbarCollapse.classList.remove('show');
+      navbar.classList.remove('scrolled');
+
+      // Reset to original transition setting after action
+      setTimeout(() => { navbarCollapse.style.transition = ''; }, 0);
+    } else {
+      navbarCollapse.classList.add('show');
+      navbar.classList.add('scrolled');
+      // Enable transition
+      navbarCollapse.style.transition = '';
+    }
+  });
+});
