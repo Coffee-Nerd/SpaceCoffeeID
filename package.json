@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.12",
+    "@capacitor/android": "^5.4.2",
+    "astro": "latest",
     "sharp": "^0.32.5"
   },
   "trustedDependencies": [

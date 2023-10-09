@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">spacecoffeeid</string>
+    <string name="title_activity_main">spacecoffeeid</string>
+    <string name="package_name">coffee.information.app</string>
+    <string name="custom_url_scheme">coffee.information.app</string>
+</resources>
