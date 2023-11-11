@@ -7,10 +7,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "ionic:build": "npm run build",
+    "ionic:serve": "npm run start"
   },
   "dependencies": {
     "@capacitor/android": "^5.4.2",
+    "@capacitor/ios": "^5.4.2",
     "astro": "latest",
     "sharp": "^0.32.5"
   },

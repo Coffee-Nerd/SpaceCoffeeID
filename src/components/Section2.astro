@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import sectionImage from "../assets/images/coffeebeans.jpg";
 ---
 <div class="section2">
@@ -16,7 +15,7 @@ import sectionImage from "../assets/images/coffeebeans.jpg";
     CoffeeID makes it easy to share information with everyone. You just input your information, and share your CoffeeID!</p>
   </div>
   <div class="sectionImage">
-    <Image src={sectionImage} alt="a bowl full of coffee beans" id="sectionImage">
+    <img src={sectionImage.src} alt="a bowl full of coffee beans" id="sectionImage" />
   </div>
 </div>
 <style>
