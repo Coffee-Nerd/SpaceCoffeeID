@@ -1,90 +1,223 @@
 ---
-import Socials from '../components/Socials.astro';
+import Socials from "../components/Socials.astro";
 ---
+
 <div class="hero" id="hero">
-    <h1 class="effect-shine"><span class="text-gradient">Information</span> Matters</h1>
-<h2>Which is why we're doing our best to create a worldwide repository of coffee information.</h2>
-    <div class="button-top">
-    <button>Create a CoffeeID</button>
-    <button>Look up a CoffeeID</button>
-    </div>
-        <div class="button-bottom">
-        <button>Learn more about what we do</button>
-        </div>
-        <Socials />
+  <h1 class="effect-shine">
+    <span class="text-gradient">Information</span> Matters
+  </h1>
+  <h2>
+    Which is why we're doing our best to create a permanent worldwide repository
+    of coffee information.
+  </h2>
+  <div class="image-container">
+    <span class="spark"></span>
+    <span class="backdrop"></span>
+
+    <img
+      height="400"
+      src="https://media.discordapp.net/attachments/1125623426338541609/1172722509712470067/readpage.webp?ex=656159f2&is=654ee4f2&hm=131f41981482e6e7fb689e4f85f074c4cd098849d6636cdeb4adfb56f7b3e6b2&="
+      style="border-radius:16px"
+    />
+  </div>
+
+  <div class="button-group">
+    <button><a href="inputgcid.php" class="button">Create a CoffeeID</a></button
+    >
+    <button
+      ><a href="gcid.php" id="gcid-lookup" class="button">Look up a CoffeeID</a
+      ></button
+    >
+  </div>
+  <div class="button-group" style="padding-top:16px">
+    <button><a href="#about" class="button">Explore what we do</a></button>
+  </div>
 </div>
 
 <style>
-    h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-    /* effect-shine */
-h1.effect-shine:hover {
-  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 75%);
-  -webkit-mask-size: 200% 100%;
-  animation: shine 2s linear
-}
-
-@keyframes shine {
-  0% {
-    -webkit-mask-position: 200% 0;
+  .spark {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--border-radius);
+    rotate: 0deg;
+    mask-image: linear-gradient(white, transparent 50%);
+    animation: flip calc(var(--spark-duration) * 2) infinite steps(2, end);
+    z-index: -1;
   }
-  100% {
-    -webkit-mask-position: -200% 0;
-  }
-}
 
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-    h2 {
+  @keyframes flip {
+    to {
+      rotate: 360deg;
+    }
+  }
+  .image-container {
+    /* this contains the image and the spark */
+    display: inline-block;
+    border-radius: 34px;
+    position: relative;
+    overflow: hidden;
+    width: 195px;
+    height: 399px;
+    z-index: 1;
+    margin-bottom: 12px;
+  }
+
+  .image-container img {
+    display: block;
+    position: absolute;
+    left: -2px;
+    border-radius: var(--border-radius);
+  }
+
+  .spark::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    aspect-ratio: 1;
+    inset: 0 auto auto 50%;
+    z-index: -1;
+    translate: -50% -15%;
+    rotate: -90deg;
+    opacity: 1;
+    background-image: conic-gradient(
+      from 0deg,
+      transparent 0 340deg,
+      var(--spark-color) 360deg
+    );
+    animation: rotate var(--spark-duration) linear infinite both;
+  }
+
+  @keyframes rotate {
+    0%,
+    20% {
+      transform: rotate(0deg);
+      opacity: 0; /* Start and stay invisible for a longer period */
+    }
+    30%,
+    70% {
+      opacity: 1; /* Fully visible during the middle of the animation */
+    }
+    80%,
+    100% {
+      transform: rotate(180deg);
+      opacity: 0; /* Fade out and stay invisible for a longer period */
+    }
+  }
+
+  .image-container .spark,
+  .image-container .backdrop {
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+  }
+
+  .gradient-header {
+    background: linear-gradient(
+      to right bottom,
+      rgb(255, 255, 255) 30%,
+      rgba(255, 255, 255, 0.38)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .button-group a.button {
+    white-space: nowrap;
+  }
+
+  .button.margin-top {
+    margin-top: 0;
+  }
+  @media (max-width: 768px) {
+    .button-group {
+      flex-direction: column;
+    }
+    a.button {
+      font-size: 1rem;
+    }
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin: 70px 0% 0% 0%;
+  }
+  /* effect-shine */
+  h1.effect-shine:hover {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 25%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 1) 75%
+    );
+    -webkit-mask-size: 200% 100%;
+    animation: shine 2s linear;
+  }
+
+  @keyframes shine {
+    0% {
+      -webkit-mask-position: 200% 0;
+    }
+    100% {
+      -webkit-mask-position: -200% 0;
+    }
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  h2 {
     text-align: center;
     line-height: 1.1;
     font-size: 1.3rem;
-    }
-.button-top {
-    /* background-image: url("../assets/bg-themes/leafbg.webp"); */
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-.button-bottom {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem; /* this may not be the best way to do this */
-}
+  }
 
-button {
+  button {
     padding: 1rem;
     color: rgb(255, 255, 255);
-    background: rgba( 0, 0, 0, 0.5 );
+    background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.57);
-    backdrop-filter: blur( 9px );
-    -webkit-backdrop-filter: blur( 9px );
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
     border: 1px solid rgba(0, 0, 0, 0.18);
     border-radius: 4px;
     font-size: 1.3rem;
-}
+  }
 
-button:hover {
+  button:hover {
     background: transparent;
     color: white;
-    backdrop-filter: blur( 9px );
+    backdrop-filter: blur(9px);
     border: 1px solid rgba(255, 255, 255, 0.18);
-}
-.hero {
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  .hero {
     min-height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+    align-items: center;
+  }
 </style>
