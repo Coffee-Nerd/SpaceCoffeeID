@@ -15,6 +15,7 @@
     "@capacitor/android": "^5.4.2",
     "@capacitor/ios": "^5.4.2",
     "astro": "latest",
+    "prettier-plugin-astro": "^0.12.1",
     "sharp": "^0.32.5"
   },
   "trustedDependencies": [
