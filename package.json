@@ -2,18 +2,22 @@
   "name": "spacecoffeeid",
   "version": "0.0.1",
   "dependencies": {
+    "@expo/webpack-config": "^19.0.0",
     "astro": "latest",
+    "axios": "^1.6.2",
+    "expo": "^49.0.19",
     "prettier-plugin-astro": "^0.12.1",
+    "react-dom": "18.2.0",
+    "react-native-web": "~0.19.6",
+    "react-native-webview": "13.2.2",
     "sharp": "^0.32.5"
   },
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "dev": "astro dev & expo start",
+    "start": "astro dev & expo start",
+    "build": "astro build & expo build",
     "preview": "astro preview",
-    "astro": "astro",
-    "ionic:build": "npm run build",
-    "ionic:serve": "npm run start"
+    "astro": "astro"
   },
   "trustedDependencies": [
     "sharp"
