@@ -1,7 +1,11 @@
 {
   "name": "spacecoffeeid",
-  "type": "module",
   "version": "0.0.1",
+  "dependencies": {
+    "astro": "latest",
+    "prettier-plugin-astro": "^0.12.1",
+    "sharp": "^0.32.5"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,17 +15,8 @@
     "ionic:build": "npm run build",
     "ionic:serve": "npm run start"
   },
-  "dependencies": {
-    "@capacitor/android": "^5.4.2",
-    "@capacitor/ios": "^5.4.2",
-    "astro": "latest",
-    "prettier-plugin-astro": "^0.12.1",
-    "sharp": "^0.32.5"
-  },
   "trustedDependencies": [
     "sharp"
   ],
-  "devDependencies": {
-    "@capacitor/cli": "5.5.1"
-  }
+  "type": "module"
 }

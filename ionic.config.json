@@ -1,7 +1,0 @@
-{
-  "name": "spacecoffeeid",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "custom"
-}
