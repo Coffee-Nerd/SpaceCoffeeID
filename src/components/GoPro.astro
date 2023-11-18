@@ -1,0 +1,199 @@
+<div class="GoPro">
+  <div class="heroAnnouncementOuter">
+    <div class="heroAnnouncementGradient"></div>
+    <div class="heroAnnouncement">
+      <div>
+        <h3>Introducing [WHATEVER] Pro</h3>
+        <p>
+          Whatever Pro unlocks a new level of productivity with cool features
+          and more...
+        </p>
+      </div>
+      <a class="heroReadMore" href="/pro">
+        <span>Go Pro</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 16 16"
+          class="icon"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M9.75 4.75 13.25 8m0 0-3.5 3.25M13.25 8H2.75"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+  body {
+    font-family: "Inter", sans-serif;
+  }
+
+  *,
+  :after,
+  :before {
+    box-sizing: border-box;
+  }
+
+  .GoPro {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .heroAnnouncementOuter {
+    position: relative;
+    min-width: 40%;
+    max-width: 1000px;
+    padding: 4px;
+    margin-top: 128px;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba(22, 4, 8, 0.5), rgba(22, 4, 8, 0.5)),
+      linear-gradient(100.41deg, #ff5b37 0.52%, #ab0052 100.52%);
+    border-radius: 16px;
+    box-shadow: 0 0 27px rgba(173, 40, 40, 0.48);
+  }
+
+  .heroAnnouncementGradient {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    background: conic-gradient(
+      transparent 50deg,
+      #ff4874 80deg,
+      transparent 100deg
+    );
+    filter: blur(8px);
+    border-radius: 16px;
+    animation: heroDisco -0.64s linear 4s infinite;
+  }
+
+  .heroAnnouncement {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px 24px;
+    background: linear-gradient(
+        0deg,
+        rgba(22, 4, 8, 0.96),
+        rgba(22, 4, 8, 0.96)
+      ),
+      linear-gradient(100.41deg, #ff5b37 0.52%, #ab0052 100.52%);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    border-radius: 12px;
+  }
+
+  .heroAnnouncement > div {
+    flex-grow: 1;
+  }
+
+  .heroReadMore {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    font-size: 14px;
+    color: #c61e4a;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .heroReadMore > span {
+    margin-right: 4px;
+  }
+
+  .heroReadMore > svg {
+    font-style: normal;
+    transition: transform 0.2s;
+  }
+
+  .heroReadMore:hover {
+    background: linear-gradient(
+      100.41deg,
+      rgba(255, 135, 108, 0.2) 0.52%,
+      rgba(171, 0, 82, 0.2) 100.52%
+    );
+  }
+
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-size: inherit;
+  }
+
+  h3,
+  p {
+    font-family: var(--font-jetbrains-mono), Menlo, Monaco, Courier, monospace;
+    color: white;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  @media (min-width: 480px) {
+    .heroAnnouncement {
+      padding: 30px;
+    }
+
+    .heroReadMore {
+      padding: 8px 16px;
+      margin-left: 24px;
+      background: linear-gradient(
+        100.41deg,
+        rgba(255, 91, 55, 0.1) 0.52%,
+        rgba(171, 0, 82, 0.1) 100.52%
+      );
+      transition: background-color 0.2s;
+    }
+
+    .heroReadMore > span {
+      background: linear-gradient(
+          0deg,
+          hsla(0, 0%, 100%, 0.1),
+          hsla(0, 0%, 100%, 0.1)
+        ),
+        linear-gradient(100.41deg, #ff5b37 0.52%, #ab0052 100.52%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  @media (min-width: 720px) {
+    .heroAnnouncementGradient {
+      aspect-ratio: 6.3 / 1;
+    }
+  }
+
+  @keyframes heroDisco {
+    0% {
+      transform: translateY(-25%) translateX(40%) rotate(0deg);
+    }
+    30% {
+      transform: translateY(0) translateX(0) rotate(90deg) scaleX(0.7);
+    }
+    50% {
+      transform: translateY(-25%) translateX(-40%) rotate(180deg);
+    }
+    70% {
+      transform: translateY(0) translateX(0) rotate(270deg) scaleX(0.7);
+    }
+    100% {
+      transform: translateY(-25%) translateX(40%) rotate(1turn);
+    }
+  }
+</style>
