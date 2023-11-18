@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { WebView } from "react-native-webview";
+import { SafeAreaView, View, StyleSheet } from "react-native";
 import axios from "axios";
 
 const App = () => {
@@ -12,7 +13,18 @@ const App = () => {
     });
   }, []);
 
-  return <WebView source={source} />;
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <WebView source={source} androidHardwareAccelerationDisabled={false} />
+    </SafeAreaView>
+  );
 };
+
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: "rgba(15, 36, 15, 0.612)",
+  },
+});
 
 export default App;
