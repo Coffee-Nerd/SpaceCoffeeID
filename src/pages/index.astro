@@ -84,6 +84,13 @@ import GoPro from "../components/GoPro.astro";
     font-size: 1.1rem;
     line-height: 1.6;
   }
+
+  @supports (padding-top: env(safe-area-inset-top)) {
+    main {
+      --safe-area-inset-top: env(safe-area-inset-top);
+      padding: var(--safe-area-inset-top);
+    }
+  }
   .astro-a {
     position: absolute;
     top: -32px;
