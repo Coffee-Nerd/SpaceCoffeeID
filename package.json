@@ -20,5 +20,8 @@
   },
   "trustedDependencies": [
     "sharp"
-  ]
+  ],
+  "devDependencies": {
+    "@capacitor/cli": "5.5.1"
+  }
 }

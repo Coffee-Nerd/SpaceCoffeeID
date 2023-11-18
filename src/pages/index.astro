@@ -1,159 +1,165 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Card from '../components/Card.astro';
-import Hero from '../components/Hero.astro';
-import Section2 from '../components/Section2.astro';
-import What from '../components/What.astro';
-import Counter from '../components/Counter.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import Section2 from "../components/Section2.astro";
+import What from "../components/What.astro";
+import Counter from "../components/Counter.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import GoPro from "../components/GoPro.astro";
 ---
-<Layout title="Welcome to Astro."></Layout>
+
+<Layout title="Welcome to Astro." />
 <Navbar />
-	<main>
-		<Hero />
-		<h2 class="card-section-title" id="card-section-title">ABOUT WORLD COFFEE INFORMATION HUB</h2>
-		<p class="card-section-content">Our Projects</p>
-		<ul role="list" class="link-card-grid" id="card-section">
-			<Card
-				href="https://docs.astro.build/"
-				title="CoffeeID (CID)"
-				body="The purpose of CoffeeID is to create a collective of information which includes producers, varietals, processing method, taste experience, and more. This may include photos, videos, or text; any pertinent information about the coffee you're identifying. CoffeeID is a tool to share coffee information with the masses in a convenient way."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Education"
-				body="The World Coffee Information Hub also aims to be an education hub. This will include informational text, video tutorials, visual learning, and discussion forums, so you can take your coffee skills and knowledge to the next level."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Information"
-				body="Our goal is to create the biggest repository of coffee information in the world, starting with consumer coffee information. Anybody will be able to access the information on the website, which will including the popularity of varietals, producers, processing methods, and more. Our goal is to measure every data point we can, and keep the information transparent and accessible."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Marketplace"
-				body="If you've noticed a coffee is highly reviewed, is trending, or if you just have interest, you will potentially be able to buy that coffee directly on the marketplace. We hope this brings a new level of discovery and accessibility to roasters worldwide."
-			/>
-		</ul>
-		<Section2 />
-		<ul class="link-card-grid" id="What">
-		<What
-		    title="Information"
-			body="Track the popularity of varietals, processing methods, producers, and more. Our aim is to be the biggest coffee information hub out there."
-			image="src/assets/images/computer.jpg"
-			alt="This is picture 1"
-			/>
-			<What
-		    title="Transparency"
-			body="Transparency is important for the industry as a whole, as it helps consumers understand the prices they're paying, and helps producers receive the resources they deserve for the coffees they're producing."
-			image="src/assets/images/transparency.jpg"
-			alt="This is picture 2"
-			/>
-			<What
-		    title="Connection"
-			body="Create a connection by sharing coffee with your friend! Gone are the days of writing endless bits of information on tubes or bags that won't even fit. Now just use a short and concise CoffeeID!"
-			image="src/assets/images/globe.jpg"
-			alt="This is a picture3"
-			/>
-		</ul>
-		<Counter />
-		<Contact />
-		<Footer />
-	</main>
-</Layout>
+<main>
+  <Hero />
+  <GoPro />
+  <h2 class="card-section-title" id="card-section-title">
+    ABOUT WORLD COFFEE INFORMATION HUB
+  </h2>
+  <p class="card-section-content">Our Projects</p>
+  <ul role="list" class="link-card-grid" id="card-section">
+    <Card
+      href="https://docs.astro.build/"
+      title="CoffeeID (CID)"
+      body="The purpose of CoffeeID is to create a collective of information which includes producers, varietals, processing method, taste experience, and more. This may include photos, videos, or text; any pertinent information about the coffee you're identifying. CoffeeID is a tool to share coffee information with the masses in a convenient way."
+    />
+    <Card
+      href="https://astro.build/integrations/"
+      title="Education"
+      body="The World Coffee Information Hub also aims to be an education hub. This will include informational text, video tutorials, visual learning, and discussion forums, so you can take your coffee skills and knowledge to the next level."
+    />
+    <Card
+      href="https://astro.build/themes/"
+      title="Information"
+      body="Our goal is to create the biggest repository of coffee information in the world, starting with consumer coffee information. Anybody will be able to access the information on the website, which will including the popularity of varietals, producers, processing methods, and more. Our goal is to measure every data point we can, and keep the information transparent and accessible."
+    />
+    <Card
+      href="https://astro.build/chat/"
+      title="Marketplace"
+      body="If you've noticed a coffee is highly reviewed, is trending, or if you just have interest, you will potentially be able to buy that coffee directly on the marketplace. We hope this brings a new level of discovery and accessibility to roasters worldwide."
+    />
+  </ul>
+  <Section2 />
+  <ul class="link-card-grid" id="What">
+    <What
+      title="Information"
+      body="Track the popularity of varietals, processing methods, producers, and more. Our aim is to be the biggest coffee information hub out there."
+      image="src/assets/images/computer.jpg"
+      alt="This is picture 1"
+    />
+    <What
+      title="Transparency"
+      body="Transparency is important for the industry as a whole, as it helps consumers understand the prices they're paying, and helps producers receive the resources they deserve for the coffees they're producing."
+      image="src/assets/images/transparency.jpg"
+      alt="This is picture 2"
+    />
+    <What
+      title="Connection"
+      body="Create a connection by sharing coffee with your friend! Gone are the days of writing endless bits of information on tubes or bags that won't even fit. Now just use a short and concise CoffeeID!"
+      image="src/assets/images/globe.jpg"
+      alt="This is a picture3"
+    />
+  </ul>
+  <Counter />
+  <Contact />
+  <Footer />
+</main>
 
 <style>
-	html {
-		background-image: url("../assets/bg-themes/leafbg.webp");
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-	}
-	main {
-		max-width: 2000px;
-		margin: auto;
-		padding: 0rem 1rem 0rem 1rem;
-		color: white;
-		font-size: 1.1rem;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-    #card-section {
-		margin-bottom: 300px;
-	}
-	.card-section-title {
-		display: flex;
-		justify-content: center;
-		text-align: center;
-		font-size: 1.6rem;/* calc(1.3rem + .6vw); */
-		padding-top: 100px;
-	}
-	.card-section-content {
-		display: flex;
-		justify-content: center;
-		padding-bottom: 1rem;
-		font-size: 1.5rem;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(32ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-	ul {
-		margin-bottom: 8rem;
-	}
+  html {
+    background-image: url("../assets/bg-themes/leafbg.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  main {
+    max-width: 2000px;
+    margin: auto;
+    padding: 0rem 1rem 0rem 1rem;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  #card-section {
+    margin-bottom: 300px;
+  }
+  .card-section-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem; /* calc(1.3rem + .6vw); */
+    padding-top: 100px;
+  }
+  .card-section-content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+  ul {
+    margin-bottom: 8rem;
+  }
 
-    #What {
-		margin-top: 300px;
-	}
+  #What {
+    margin-top: 300px;
+  }
 
-
-	/* TODO: look at the margin-right -1rem for under 400px screen sizes later  DONE*/
-	/* TODO: add a media query to change the card section so it doesn't ever do 3x1 + 1x1 */
-	/* TODO: Have a look at the mobile version What cards to make sure they stand out. */
-	/* TODO: Rework the index navbar links as create+lookup may not be needed given they're in the hero area, but who knows*/
+  /* TODO: look at the margin-right -1rem for under 400px screen sizes later  DONE*/
+  /* TODO: add a media query to change the card section so it doesn't ever do 3x1 + 1x1 */
+  /* TODO: Have a look at the mobile version What cards to make sure they stand out. */
+  /* TODO: Rework the index navbar links as create+lookup may not be needed given they're in the hero area, but who knows*/
 </style>
