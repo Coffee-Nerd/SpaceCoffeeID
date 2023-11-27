@@ -15,7 +15,6 @@ import GoPro from "../components/GoPro.astro";
 <Navbar />
 <main>
   <Hero />
-  <GoPro />
   <h2 class="card-section-title" id="card-section-title">
     ABOUT WORLD COFFEE INFORMATION HUB
   </h2>
@@ -23,7 +22,7 @@ import GoPro from "../components/GoPro.astro";
   <ul role="list" class="link-card-grid" id="card-section">
     <Card
       href="https://docs.astro.build/"
-      title="CoffeeID (CID)"
+      title="CoffeeID"
       body="The purpose of CoffeeID is to create a collective of information which includes producers, varietals, processing method, taste experience, and more. This may include photos, videos, or text; any pertinent information about the coffee you're identifying. CoffeeID is a tool to share coffee information with the masses in a convenient way."
     />
     <Card
@@ -70,7 +69,13 @@ import GoPro from "../components/GoPro.astro";
 
 <style>
   html {
-    background-image: url("../assets/bg-themes/leafbg.webp");
+    /* background-image: url("../assets/bg-themes/leafbg.webp"); */
+    background: rgb(0, 42, 26);
+    background: radial-gradient(
+      circle,
+      rgba(0, 42, 26, 1) 10%,
+      rgba(0, 0, 0, 1) 100%
+    );
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
