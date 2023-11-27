@@ -4,7 +4,9 @@ import Socials from "../components/Socials.astro";
 
 <div class="hero" id="hero">
   <h1 class="effect-shine">
-    <span class="text-gradient">Information</span> Matters
+    <span class="gradient-header"
+      >CoffeeID is a better way to share coffee information</span
+    >
   </h1>
   <h2>
     Which is why we're doing our best to create a permanent worldwide repository
@@ -123,7 +125,7 @@ import Socials from "../components/Socials.astro";
     color: transparent;
     font-family: "Arial", sans-serif;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1;
     margin-bottom: 24px;
   }
 
@@ -132,6 +134,7 @@ import Socials from "../components/Socials.astro";
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    width: 80%;
   }
 
   .button-group a.button {
@@ -141,16 +144,9 @@ import Socials from "../components/Socials.astro";
   .button.margin-top {
     margin-top: 0;
   }
-  @media (max-width: 768px) {
-    .button-group {
-      flex-direction: column;
-    }
-    a.button {
-      font-size: 1rem;
-    }
-  }
+
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1;
     text-align: center;
@@ -166,6 +162,17 @@ import Socials from "../components/Socials.astro";
     );
     -webkit-mask-size: 200% 100%;
     animation: shine 2s linear;
+  }
+  @media screen and (max-width: 768px) {
+    .button-group {
+      flex-direction: column;
+    }
+    a.button {
+      font-size: 1.1rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
   }
 
   @keyframes shine {
@@ -187,7 +194,7 @@ import Socials from "../components/Socials.astro";
   h2 {
     text-align: center;
     line-height: 1.1;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   button {
